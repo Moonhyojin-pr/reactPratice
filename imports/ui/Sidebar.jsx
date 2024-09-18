@@ -82,7 +82,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => (
                     ))}
                   </ul>
                 </li>
-                <li>
+                {/* <li>
                   <div className="text-xs font-semibold leading-6 text-indigo-200">
                     Your teams
                   </div>
@@ -118,7 +118,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => (
                     />
                     Settings
                   </a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
