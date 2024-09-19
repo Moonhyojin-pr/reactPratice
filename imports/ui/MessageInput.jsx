@@ -79,6 +79,40 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// import React from 'react';
+
+// const MyForm = () => {
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const formData = new FormData(e.target); // 폼 데이터를 한번에 가져옴
+//     const data = Object.fromEntries(formData.entries()); // FormData를 객체로 변환
+//     console.log('Form Data:', data);
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <label>
+//         Name:
+//         <input type="text" name="name" />
+//       </label>
+//       <br />
+//       <label>
+//         Email:
+//         <input type="email" name="email" />
+//       </label>
+//       <br />
+//       <label>
+//         Message:
+//         <textarea name="message" />
+//       </label>
+//       <br />
+//       <button type="submit">Submit</button>
+//     </form>
+//   );
+// };
+
+// export default MyForm;
+
 export default function MessageInput() {
   const [selected, setSelected] = useState(moods[5]);
 
