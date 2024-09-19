@@ -5,8 +5,8 @@ import Memorial from "./Memorial.jsx"
 import Message from "./Message.jsx"
 import About from "./About.jsx"
 import NotFound from "./NotFound.jsx"
-import Sidebar from "./Sidebar"
-import Header from "./Header"
+import Sidebar from "./side/Sidebar"
+import Header from "./side/Header"
 
 export const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
