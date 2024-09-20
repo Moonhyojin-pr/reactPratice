@@ -12,8 +12,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-const Sidebar = ({ sidebarOpen, setSidebarOpen }) => (
-  <>
+const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
+  console.log(navigation);
+  navigation.forEach((item, index) => {
+    navigation[index].current =false;
+  })
+  
+  return (
+    <>
     <Dialog
       open={sidebarOpen}
       onClose={setSidebarOpen}
@@ -209,6 +215,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => (
           </div>
         </div>
   </>
-)
+  )
+}
 
 export default Sidebar

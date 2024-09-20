@@ -24,7 +24,7 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid"
 
 export const navigation = [
-  { name: "Awards", href: "/", icon: HomeIcon, current: true },
+  { name: "Awards", href: "/", icon: HomeIcon, current: false },
   { name: "Memorial", href: "/Memorial", icon: UsersIcon, current: false },
   { name: "Message", href: "/Message", icon: FolderIcon, current: false },
   { name: "About", href: "/About", icon: CalendarIcon, current: false },
