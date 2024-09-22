@@ -12,6 +12,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
+//sidebar active
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   console.log(navigation);
   navigation.forEach((item, index) => {
