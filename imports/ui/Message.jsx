@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {useTracker} from "meteor/react-meteor-data";
 import {CollectionPosts} from "/imports/api/collections.js";
 import MessageInput from "./MeesageInput.jsx"
+import Prev from "./Prev.jsx"
 
   export default function Message() {
    
@@ -13,6 +14,7 @@ import MessageInput from "./MeesageInput.jsx"
     return (
       <>
       <MessageInput />
+      
       <ul role="list" className="divide-y divide-gray-100">
         {messages.map((message) => (
           <li key={message._id} className="flex gap-x-4 py-5">
@@ -36,6 +38,8 @@ import MessageInput from "./MeesageInput.jsx"
           </li>
         ))}
       </ul>
+      <Prev />
+      
       </>
       
 

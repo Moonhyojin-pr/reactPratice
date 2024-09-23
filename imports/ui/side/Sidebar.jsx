@@ -54,7 +54,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <div className="flex h-16 shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                // src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                src="logo.png"
                 className="h-8 w-auto"
               />
             </div>
@@ -114,18 +115,34 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     ))}
                   </ul>
                 </li>
+                */}
                 <li className="mt-auto">
                   <a
-                    href="#"
+                    href="http://www.youtube.com/@%EC%84%B8%EB%85%B8"
                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
                   >
-                    <Cog6ToothIcon
+                    {/* <Cog6ToothIcon
                       aria-hidden="true"
                       className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
-                    />
-                    Settings
+                    /> */}
+
+                    {/* 임시 */}
+                    <img src="./sns_Default.png"/>
+                    Youtub
                   </a>
-                </li> */}
+
+                  <a
+                    href="https://x.com/cv_tpsh"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                  >
+                    {/* <Cog6ToothIcon
+                      aria-hidden="true"
+                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                    /> */}
+                    <img src="./sns_Default1.png" />
+                    Twiiter
+                  </a>
+                </li> 
               </ul>
             </nav>
           </div>
@@ -140,7 +157,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <div className="flex h-16 shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                // src="https://tailwindui.com/img/logos/mark.svg?color=white"
+                src="logo.png"
                 className="h-8 w-auto"
               />
             </div>
@@ -198,19 +216,32 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       </li>
                     ))}
                   </ul>
-                </li>
+                </li>*/}
                 <li className="mt-auto">
                   <a
-                    href="#"
+                    href="http://www.youtube.com/@%EC%84%B8%EB%85%B8"
                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
                   >
-                    <Cog6ToothIcon
+                    {/* <Cog6ToothIcon
                       aria-hidden="true"
                       className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
-                    />
-                    Settings
+                    /> */}
+                    <img src="./sns_Default.png"/>
+                    Youtub
                   </a>
-                </li> */}
+
+                  <a
+                    href="https://x.com/cv_tpsh"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                  >
+                    {/* <Cog6ToothIcon
+                      aria-hidden="true"
+                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                    /> */}
+                    <img src="./sns_Default1.png" />
+                    Twitter
+                  </a>
+                </li> 
               </ul>
             </nav>
           </div>

@@ -2,11 +2,11 @@ import React, {useState, useEffect} from "react"
 
 const Home = () => {
   const images =[
-    {img:'./1.jpg', title:'Image 1'},
-    {img:'./3.jpg', title:'Image 2'},
-    {img:'./4.jpg', title:'Image 3'},
-    {img:'./5.jpg', title:'Image 4'},
-    {img:'./6.jpg', title:'Image 5'},
+    {title:'Image 1', img:'./1.jpg'},
+    {title:'Image 2', img:'./3.jpg'},
+    {title:'Image 3', img:'./4.jpg'},
+    {title:'Image 4', img:'./5.jpg'},
+    {title:'Image 5', img:'./6.jpg'},
   ]
 
   const [page, setPage] =useState(0); //페이지 번호
@@ -43,8 +43,8 @@ const Home = () => {
           
           {selectedImages.map ((image, index) => (
             <div key={index} className='image-item'> 
-              <img src={image.img} alt={image.title} /> 
-              <p>{image.title}</p>
+            <p>{image.title}</p>
+            <img src={image.img} alt={image.title} />               
             </div>            
           ))}
           
