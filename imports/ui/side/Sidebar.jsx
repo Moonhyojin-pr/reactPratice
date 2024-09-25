@@ -127,7 +127,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     /> */}
 
                     {/* 임시 */}
-                    <img src="./sns_Default.png"/>
+                    <img src="./sns_Default3.png"/>
                     Youtub
                   </a>
 
@@ -139,7 +139,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       aria-hidden="true"
                       className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
                     /> */}
-                    <img src="./sns_Default1.png" />
+                    <img src="./sns_Default2.png" />
                     Twiiter
                   </a>
                 </li> 
@@ -226,7 +226,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       aria-hidden="true"
                       className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
                     /> */}
-                    <img src="./sns_Default.png"/>
+                    <img src="./sns_Default3.png"/>
                     Youtub
                   </a>
 
@@ -238,7 +238,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       aria-hidden="true"
                       className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
                     /> */}
-                    <img src="./sns_Default1.png" />
+                    <img src="./sns_Default2.png" />
                     Twitter
                   </a>
                 </li> 
