@@ -29,12 +29,12 @@ const images =[
   {
     value:'image1',
     name:'testimage',
-    src:"./test.png",
+    src:"/test.png",
   },
   {
     value:'image2',
     name:'testimage2',
-    src: "./test1.png"
+    src: "/test1.png"
   },
 ];
 
@@ -117,10 +117,9 @@ return (
           onChange={(e) => {
             setMessages(e.target.value)
           }}
-          id=""
-          name=""
+          
           rows={3}
-          placeholder="Add your comment..."
+          placeholder="메세지를 입력해주세요. 0/90"
           className="block w-full resize-none border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
           // defaultValue={''}
           />
@@ -137,12 +136,12 @@ return (
       <button
       onClick={() =>{
         const handleMessage = "메세지를 입력해 주세요."
-        
-        if (messages.trim() === '') {
+
+        if (typeof messages === 'string' && messages.trim() === '') {
           window.alert(handleMessage);
         } else {
           CollectionPosts.insert({
-            image: images,
+            image: selected.src,
             createdAt :new Date(),
             message : messages,
         })

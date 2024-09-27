@@ -18,8 +18,10 @@ import Prev from "./Prev.jsx"
       <ul role="list" className="divide-y divide-gray-100">
         {messages.map((message) => (
           <li key={message._id} className="flex gap-x-4 py-5">    
-
-            <img alt={message.image} src={message.image} className="h-12 w-12 flex-none rounded-full bg-gray-50" />
+        
+            <img 
+            src={message.image} 
+            className="h-12 w-12 flex-none rounded-full bg-gray-50" />
             
             <div className="flex-auto">
               <div className="flex items-baseline justify-between gap-x-4">
@@ -38,7 +40,7 @@ import Prev from "./Prev.jsx"
           </li>
         ))}
       </ul>
-      {/* <Prev /> */}
+      <Prev />
       
       </>
       

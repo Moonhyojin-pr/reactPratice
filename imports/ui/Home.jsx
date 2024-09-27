@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import VideoPlayer from "./VideoPlyaer.jsx"
 
 const Home = () => {
   const images =[
@@ -34,13 +35,15 @@ const Home = () => {
     <>
       <main className="py-10">
         <div className="px-4 sm:px-6 lg:px-8">
+          <VideoPlayer />
+
           {/* <div>This is home.</div> */}
           {/* <img src='./1.jpg' alt="Awards" />  */}
           {/* style={{
             transform: `translateY(${-page * 100}%)`, // 현재 페이지에 따라 Y 축 이동
             transition: 'transform 0.5s ease-in-out' // 부드러운 애니메이션
           }} */}
-          
+          <br/>
           {selectedImages.map ((image, index) => (
             <div key={index} className='image-item'> 
             <p>{image.title}</p>
