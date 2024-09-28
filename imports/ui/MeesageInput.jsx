@@ -36,6 +36,11 @@ const images =[
     name:'testimage2',
     src: "/test1.png"
   },
+  {
+    value:'image3',
+    name:'testimage3',
+    src: "/test2.png"
+  },
 ];
 
 function classNames(...classes) {

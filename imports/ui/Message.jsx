@@ -6,10 +6,38 @@ import Prev from "./Prev.jsx"
 
   export default function Message() {
    
+    //previous 기능
+    const [currentPage, setCurrentPage] = useState(1);//현재 페이지상태
+    const itemsPerPage = 6; //페이지당 표시할 메세지 수
 
-    const messages =useTracker(() => {
-      return CollectionPosts.find({}, {sort: {createdAt :-1}}).fetch();
-    }, [])
+    //총 메세지 수 가져오기
+    const totalMessages =useTracker(() => {
+      return CollectionPosts.find().count();
+    }, []);
+
+    //페이지에 따라 메세지 가져오기 (skip과 limit 적용)
+    const messages = useTracker(() => {
+      
+      return CollectionPosts.find({}, {
+        sort: {createdAt:- 1}, //오름차순
+        skip:(currentPage - 1) * itemsPerPage, //페이지에 따른 skip
+        limit: itemsPerPage,  //페이지당 아이템 수
+      }).fetch();
+
+    }, [currentPage]);
+
+    //페이지 전환 함수
+    const handleNext = () => {
+      if (currentPage * itemsPerPage < totalMessages) {
+        setCurrentPage(currentPage + 1);
+      }
+    };
+
+    const handlePrevious = () => {
+      if (currentPage > 1) {
+        setCurrentPage(currentPage - 1);
+      }
+    }
 
     return (
       <>
@@ -40,7 +68,13 @@ import Prev from "./Prev.jsx"
           </li>
         ))}
       </ul>
-      <Prev />
+      <Prev 
+        currentPage = {currentPage}
+        totalMessages = {totalMessages}
+        itemsPerPage = {itemsPerPage}
+        handleNext = {handleNext}
+        handlePrevious = {handlePrevious}
+      />
       
       </>
       

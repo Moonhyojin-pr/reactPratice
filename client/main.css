@@ -6,7 +6,14 @@ body {
   /* padding: 10px;
   font-family: sans-serif; */
 }
-
+.logo {
+  width: 75%;
+  height: auto;
+  margin: 10px auto;
+  position: relative;
+  mix-blend-mode: soft-light;
+  opacity: 0.5;
+}
 /* dot nav */
 .dots {
   text-align:center;
