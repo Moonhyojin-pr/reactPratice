@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react";
 import {
   Dialog,
   DialogBackdrop,
@@ -7,6 +7,7 @@ import {
 } from "@headlessui/react"
 import { XMarkIcon, Cog6ToothIcon } from "@heroicons/react/24/outline"
 import { navigation, teams } from "./navigationData"
+// import { navigation as initialNavigation } from "./navigationData"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -18,6 +19,18 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   navigation.forEach((item, index) => {
     navigation[index].current =false;
   })
+
+  //navigation 배열 상태 관리
+  // const [navigation, setNavigation] = useState(initialNavigation);
+  // //아이템 클릭 시 current 업데이트 함수
+  // const handleItemClick = (name) => {
+  //   const updateNavigation = navigation.map((item) =>
+  //   item.name === name
+  //     ? { ...item, current:true}
+  //     : { ...item, current:false}
+  //   );
+  //   setNavigation(updateNavigation);
+  // }
   
   return (
     <>
@@ -68,6 +81,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       <li key={item.name}>
                         <a
                           href={item.href}
+                          // onClick={() =>handleItemClick(item.name)}
+                          
                           className={classNames(
                             item.current
                               ? "bg-indigo-700 text-white"
@@ -136,19 +151,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     {/* 임시 */}
                     <img src="./sns_Default3.png"/>
                     Youtub
-                  </a>
-
-                  <a
-                    href="https://x.com/cv_tpsh"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
-                  >
-                    {/* <Cog6ToothIcon
-                      aria-hidden="true"
-                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
-                    /> */}
-                    <img src="./sns_Default2.png" />
-                    Twiiter
-                  </a>
+                  </a>                  
                 </li> 
                 
               </ul>
@@ -180,6 +183,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       <li key={item.name}>
                         <a
                           href={item.href}
+                          // onClick={() =>handleItemClick(item.name)}
+
                           className={classNames(
                             item.current
                               ? "bg-indigo-700 text-white"
@@ -246,18 +251,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     />                      */}
                     <img src="./sns_Default3.png"/>
                     Youtub
-                  </a>
-
-                  <a
-                    href="https://x.com/cv_tpsh"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
-                  >
-                    {/* <Cog6ToothIcon
-                      aria-hidden="true"
-                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
-                    /> */}
-                    <img src="./sns_Default2.png" />
-                    Twitter
                   </a>
                 </li> 
                 

@@ -26,33 +26,18 @@ import {
 import { Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
 
 const images =[
-  {
-    value:'image1',
-    name:'testimage',
-    src:"/test.png",
-  },
-  {
-    value:'image2',
-    name:'testimage2',
-    src: "/test1.png"
-  },
-  {
-    value:'image3',
-    name:'testimage3',
-    src: "/test2.png"
-  },
+  { value:'image1', name:'testimage', src:"/test.png" },
+  { value:'image2', name:'testimage2', src: "/test1.png" },
+  { value:'image3', name:'testimage3', src: "/test2.png" },
 ];
 
 function classNames(...classes) {
 return classes.filter(Boolean).join(' ')
 }
 export default function MessageInput() {
-const [selected, setSelected] = useState(images[0])
-const [messages, setMessages] = useState([''])
-    // useEffect (() => {
-    //   json =fetch()
-    //   setMessages(json)
-    // }, [])
+const [selected, setSelected] = useState(images[0]);
+const [messages, setMessages] = useState(['']);
+const charLimit = 120;
 
 return (
     <div className="flex items-start space-x-4">
@@ -119,16 +104,14 @@ return (
           </label>
           <textarea
           value={messages}
-          onChange={(e) => {
-            setMessages(e.target.value)
-          }}
-          
+          onChange={(e) => 
+            setMessages(e.target.value.slice(0, charLimit))
+          }          
           rows={3}
-          placeholder="메세지를 입력해주세요. 0/90"
+          placeholder="메세지를 입력해주세요."
           className="block w-full resize-none border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-          // defaultValue={''}
           />
-        {/* Spacer element to match the height of the toolbar */}
+
         <div aria-hidden="true" className="py-2">
         {/* Matches height of button in toolbar (1px border + 36px content height) */}
           <div className="py-px">
@@ -138,6 +121,7 @@ return (
       </div>
     <div className="absolute inset-x-0 bottom-0 flex justify-between py-2 pl-3 pr-2">    
     <div className="flex-shrink-0">
+    <span className="text-sm text-gray-500">{messages.length}/{charLimit} </span>{/* 글자수 카운터 */}
       <button
       onClick={() =>{
         const handleMessage = "메세지를 입력해 주세요."

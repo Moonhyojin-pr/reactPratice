@@ -3,11 +3,11 @@ import VideoPlayer from "./VideoPlyaer.jsx"
 
 const Home = () => {
   const images =[
-    {title:'Image 1', img:'./1.jpg'},
-    {title:'Image 2', img:'./3.jpg'},
-    {title:'Image 3', img:'./4.jpg'},
-    {title:'Image 4', img:'./5.jpg'},
-    {title:'Image 5', img:'./6.jpg'},
+    {title:'Image 1', img:'./post4.jpg'},
+    {title:'Image 2', img:'./post7.jpg'},
+    {title:'Image 3', img:'./post8.jpg'},
+    {title:'Image 4', img:'./post9.jpg'},
+    {title:'Image 5', img:'./post10.jpg'},
   ]
 
   const [page, setPage] =useState(0); //페이지 번호
@@ -43,7 +43,7 @@ const Home = () => {
             transform: `translateY(${-page * 100}%)`, // 현재 페이지에 따라 Y 축 이동
             transition: 'transform 0.5s ease-in-out' // 부드러운 애니메이션
           }} */}
-          <br/>
+          {/* <br/>
           {selectedImages.map ((image, index) => (
             <div key={index} className='image-item'> 
             <p>{image.title}</p>
@@ -59,7 +59,7 @@ const Home = () => {
               onClick={() => goToPage(index)}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </main>
     </>

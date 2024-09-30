@@ -7,7 +7,7 @@ import About from "./About.jsx"
 import NotFound from "./NotFound.jsx"
 import Sidebar from "./side/Sidebar"
 import Header from "./side/Header"
-
+import Footer from "./side/Footer.jsx"
 
 export const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -29,6 +29,7 @@ export const App = () => {
               </Routes>
             </div>
           </main>
+          <Footer setSidebarOpen={setSidebarOpen} />
         </div>
       </div>
     </Router>
